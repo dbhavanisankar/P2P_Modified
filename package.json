@@ -1,0 +1,48 @@
+{
+  "name": "los-ibm",
+  "description": "vlm description",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "^8.11.1"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "debug": "chmod +x run-debug && ./run-debug",
+    "test": "nyc mocha",
+    "dev": "nodemon server/server.js"
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_HEAPDUMP_OPTIONS": "nosignal"
+    }
+  },
+  "dependencies": {
+    "appmetrics-dash": "^4.0.0",
+    "appmetrics-prometheus": "^2.0.0",
+    "appmetrics-zipkin": "^1.0.4",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.15.3",
+    "fabric-client": "^1.0.2",
+    "formidable": "^1.1.1",
+    "ibm-cloud-env": "^0",
+    "jade": "^1.11.0",
+    "log4js": "^3.0.5",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1",
+    "chai": "^4.0.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "grunt": "^0.4.5",
+    "grunt-develop": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "request": "^2.60.0",
+    "time-grunt": "^1.2.1",
+    "load-grunt-tasks": "^3.2.0"
+  }
+}
